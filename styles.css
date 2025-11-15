@@ -101,3 +101,7 @@ button:hover {
   background-color: var(--grey);
   border-radius: 5px;
 }
+
+#result {
+  padding: 10px;
+}
