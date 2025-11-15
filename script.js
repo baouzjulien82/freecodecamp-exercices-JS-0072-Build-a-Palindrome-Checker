@@ -4,11 +4,11 @@ const input = document.getElementById('text-input');
 const result = document.getElementById('result');
 
 // regEx
-const regEx = /qqc/;
+const regEx = /qqc/i;
 
 // Fonction isPalindrome
 const isPalindrome = (value) => {
-  regEx.test(value);
+  return regEx.test(value);
 };
 
 // Event Listener
@@ -18,4 +18,6 @@ button.addEventListener('click', () => {
   };
   result.textContent = isPalindrome(input.value) ? `${input.value} is a palindrome` : `${input.value} is not a palindrome`;
   input.value = "";
-});
+  setTimeout(() => {
+    result.textContent = ""}, 1200);
+  });
