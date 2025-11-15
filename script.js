@@ -17,6 +17,7 @@ const isPalindrome = (value) => {
 button.addEventListener('click', () => {
   if(input.value === "") {
     alert('Please input a value')
+    return;
   };
   result.textContent = isPalindrome(input.value) ? `${input.value} is a palindrome` : `${input.value} is not a palindrome`;
   input.value = "";
