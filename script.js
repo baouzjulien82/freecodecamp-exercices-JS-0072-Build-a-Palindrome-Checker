@@ -4,11 +4,13 @@ const input = document.getElementById('text-input');
 const result = document.getElementById('result');
 
 // regEx
-const regEx = /qqc/i;
+const regEx = /[^a-z0-9]/gi;
 
 // Fonction isPalindrome
 const isPalindrome = (value) => {
-  return regEx.test(value);
+  let string = value.replace(regEx, "").toLowerCase();
+  let stringReverse = string.split('').reverse().join('')
+  return string === stringReverse;
 };
 
 // Event Listener
